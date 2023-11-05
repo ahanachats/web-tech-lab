@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ahana Chatterjee">
+        <meta name="desc" content="Ahana Chatterjee's form">
+        <title>Ahana Chatterjee</title>
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <script>
+            alert("ENTER DETAILS");
+            function validateForm() {
+            let x = document.forms["myForm"]["name"].value;
+            if (x == "") {
+            alert("Name must be filled out");
+            return false;
+            }
+            let y = document.forms["about you"]["uni"].value;
+            if (y == "") {
+            alert("University must be filled out");
+            return false;
+            }
+            let z = document.forms["about you"]["degree"].value;
+            if (z == "") {
+            alert("Degree must be filled out");
+            return false;
+            }
+            }
+            function Con_click()
+            {
+            confirm("Confirm details.");
+            }
+            </script>
+            
+        <style>
+            html{
+                font-size: 22px
+
+            }
+        </style>
+
+    </head>
+    <form name="about you" onsubmit="return validateForm()" method="post">
+        <fieldset>
+        <legend>Personal Details</legend>
+    
+        <p>
+            <label for="Name">Your Name:</label>
+            <input type="text" name="name" id="name" placeholder="enter name" autocomplete="on" required>
+        </p>
+
+        <p>
+            <label for="university">Your University</label>
+            <input type="text" name="uni" id="univ" placeholder="enter university name" autocomplete="on" required>
+        </p>
+
+        <p>
+            <label for="subject">Your Favourite Subject:</label>
+            <input type="text" name="sub" id="subj" placeholder="enter subject" autocomplete="on" required>
+        </p>
+
+
+        <p>
+            <label for="degree">Your degree</label>
+            <input type="text" name="degree" id="degree" placeholder="your degree" autocomplete="on" required>
+        </p>
+
+        <p>
+            <label for="favCity">Location</label>
+            <input type="text" name="city" id="city" list="city-list">
+            <datalist id="city-list">
+                <option value="Chennai">
+                <option value="Bangalore">
+                <option value="Hyderabad">
+                <option value="Delhi">
+                <option value="Kolkata">
+                <option value="Mumbai">
+            </datalist>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Your Choice of Programming Language</legend>
+
+        <p>
+            <input type="radio" name="pref" id="c" value="c">
+            <label for="c">C</label>
+        </p>
+        <p>
+            <input type="radio" name="pref" id="c++" value="c++">
+            <label for="c++">C++</label>
+        </p>
+        <p>
+            <input type="radio" name="pref" id="py" value="py">
+            <label for="py">Python</label>
+        </p>
+        <p>
+            <input type="radio" name="pref" id="java" value="java">
+            <label for="java">Java</label>
+        </p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>What Sports Do you watch?</legend>
+        <p>
+            <input type="checkbox" name="sport" id="ten" value="ten">
+            <label for="ten">Tennis</label>
+        </p>
+        <p>
+            <input type="checkbox" name="sport" id="f1" value="f1">
+            <label for="f1">Formula One</label>
+        </p>
+        <p>
+            <input type="checkbox" name="sport" id="cri" value="cri">
+            <label for="cri">Cricket</label>
+        </p>
+        <p>
+            <input type="checkbox" name="sport" id="foot" value="foot">
+            <label for="foot">Football</label>
+        </p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Your Thoughts</legend>
+        <label for="note">What do you think about this quick survey?</label>
+        <br>
+        <textarea name="note" id="note" cols="50" rows="10" placeholder="type here!"></textarea>
+    </fieldset>
+    <br>
+    <input class="sub" type="submit" value="Submit" onclick="Con_click()">
+    <button type="reset">Reset</button>
+    
+</form>
